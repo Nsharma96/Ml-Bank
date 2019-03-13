@@ -3,7 +3,7 @@ This is a machine learning project made in python using pandas and sklearn libra
 
 # Prerequisites
 - [Python](https://www.python.org/)
-- Dataset [bank-full.csv](http://archive.ics.uci.edu/ml/datasets/Bank+Marketing).
+- Dataset [bank-additional-full.csv](http://archive.ics.uci.edu/ml/datasets/Bank+Marketing).
 - [Pandas library](https://pandas.pydata.org/)
 - [Sklearn](https://scikit-learn.org/stable/)
 - [Matplotlib](https://matplotlib.org/)
@@ -25,20 +25,20 @@ $ python3 Ml.py
 
 # Output
 - Selecting important features.Using feature importance.
-![Screenshot](https://github.com/Nsharma96/Ml-Bank/blob/master/Figure_1.png)
+![Screenshot](https://github.com/Nsharma96/Ml-Bank/blob/master/f.png)
 
 - correlation matrix.
 
 - Accuracy Matrix .
-  - Accuracy for Random Forest :0.8937299568727193
-  - Accuracy for KNN :0.8752626340816101
-  - Accuracy for Neural Nets :0.8521508348999226
+ - - Accuracy for Random Forest :0.913814032532168
+ - - Accuracy for KNN :0.8900218499635834
+ - - Accuracy for Neural Nets :0.8865015780529255
   
 # Goals achieved
 
 As we can see Random Forest classifier gave the best accuracy. So, to reduce marketing cost and increase acquire percentage 
-(Y%) we can make use of this classifier. This classifier requires 5 inputs that is ‘age’, ‘duration’, ‘month’, ‘day’ and
-‘balance’ after which the classifier will predict the probability of ‘yes’ from a customer. Thus, this way we can make a list
+(Y%) we can make use of this classifier. This classifier requires 8 inputs that is 'duration','euribor3m','age','campaign','job','education','day_of_week' and 'marital' after which the classifier will predict the
+probability of ‘yes’ from a customer. Thus, this way we can make a list
 with much more accuracy and thereby reducing marketing cost (as there will be less number of calls to be made) and increasing
 Y%.
 We can also make this classifier recurrent which with time will keep getting better and better. Thereby reducing human resource, time and money expenditure.
