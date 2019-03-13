@@ -9,7 +9,7 @@ from sklearn.feature_selection import chi2
 from sklearn.ensemble import ExtraTreesClassifier
 
 #Read dataset.csv
-dataset = pd.read_csv("bank-full.csv",sep = ';')
+dataset = pd.read_csv("bank-additional-full.csv",sep = ';')
 
 #store y values in res
 res = dataset.iloc[:,-1]
@@ -19,7 +19,7 @@ res = res.replace(['yes','no'],(1,0))
 
 #Label encoding so that coloumns having string values can be trained.
 dataset_train = dataset
-f = ['job','marital','default','education','housing','loan','contact','month','poutcome']
+f = ['job','marital','default','education','housing','loan','contact','month','poutcome','day_of_week']
 for i in f:
     __ = preprocessing.LabelEncoder()
     __ = __.fit(dataset_train[i])
@@ -39,7 +39,7 @@ plt.show()
 print(dataset.corr())
 
 #Preparing data.
-rfeatures = features[['duration','age','month','day','balance']]
+rfeatures = features[['duration','euribor3m','age','campaign','job','education','day_of_week','marital']]
 xTrain, xTest, yTrain, yTest = train_test_split(rfeatures, res, test_size = 0.2, random_state = 42 )
 
 
